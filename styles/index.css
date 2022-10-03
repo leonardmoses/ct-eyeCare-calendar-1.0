@@ -1,5 +1,31 @@
 @import url("/styles/Main.css");
-body {
-  background-color: lightgray;
+html {
+  font-size: 62.5%;
+}
+
+html body .container {
+  width: 100%;
+  height: 100vh;
+  background-color: #12121f;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* horizontal center */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* verticle center */
+}
+
+html body .container .calendar {
+  width: 45rem;
+  height: 52rem;
+  background-color: #222227;
+  -webkit-box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
 }
 /*# sourceMappingURL=index.css.map */

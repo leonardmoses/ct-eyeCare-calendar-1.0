@@ -1,5 +1,26 @@
 @import url("/styles/Main.css");
 
-body {
-    background-color: lightgray;
+
+html {
+    font-size: 62.5%;
+    
+    body {
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: #12121f;
+            color: #eee;
+            display: flex;
+            justify-content: center; /* horizontal center */
+            align-items: center; /* verticle center */
+
+            .calendar {
+                width: 45rem;
+                height: 52rem;
+                background-color: #222227;
+                box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
+            }
+        }
+    }
 }
