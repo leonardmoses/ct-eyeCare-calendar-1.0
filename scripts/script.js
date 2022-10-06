@@ -1,10 +1,32 @@
+// array list of months
+const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+]
+
 // Set date to current date
-const date = new Date();
+let date = new Date('Dec 29, 1984');
+
+let decPrevYear = new Date(`Dec 1, ${date.getFullYear()-1}`);
+
+console.log(date)
+console.log(decPrevYear)
+
 
 // #region Leap Year Check
 
-// const year = date.getFullYear()
-const year = 2020;
+const year = date.getFullYear()
+// const year = 2020;
 console.log(`Current year: ${year}`)
 let isLeapYear = false;
 
@@ -26,21 +48,7 @@ if (isLeapYear) {
 
 console.log(`Total Days = ${totalYearDays}`)
 
-// array list of months
-const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-]
+
 
 // display Month in calHeader
 document.querySelector('.selectedMonth').innerHTML = months[date.getMonth()]
@@ -49,3 +57,26 @@ document.querySelector('.selectedMonth').innerHTML = months[date.getMonth()]
 document.querySelector('.selectedDate').innerHTML = date.toDateString();
 
 
+const firstDayOfYear = new Date(date.getFullYear(), 0)
+
+const monthDays = document.querySelector('.julianDays');
+
+let days = "";
+
+for (let i = 1; i<= 31; i++) {
+    days += `<div class='prev-year-days'>${i}</div>`;
+    monthDays.innerHTML = days;
+}
+
+for (let i = 1; i<= totalYearDays; i++) {
+    days += `<div class='current-year-days'>${i}</div>`;
+    monthDays.innerHTML = days;
+}
+
+for (let i = 1; i<= 31; i++) {
+    days += `<div class='prev-year-days'>${i}</div>`;
+    monthDays.innerHTML = days;
+}
+
+console.log(firstDayOfYear)
+console.log(firstDayOfYear.getDay())

@@ -142,7 +142,7 @@ html body .middleDiv .calContainer .daysOfWeek .weekdays {
 html body .middleDiv .calContainer .calendar {
   width: calc(100%);
   height: 100%;
-  background-color: #1d1d1d;
+  background-color: #433939;
   overflow-y: scroll;
   padding-right: 15px;
   /* Increase/decrease this value for cross-browser compatibility */
@@ -154,7 +154,7 @@ html body .middleDiv .calContainer .calendar {
 }
 
 html body .middleDiv .calContainer .calendar .julianDays {
-  background-color: #60370e;
+  background-color: #664320;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +162,7 @@ html body .middleDiv .calContainer .calendar .julianDays {
       flex-wrap: wrap;
 }
 
-html body .middleDiv .calContainer .calendar .julianDays .julian {
+html body .middleDiv .calContainer .calendar .julianDays .prev-year-days, html body .middleDiv .calContainer .calendar .julianDays .current-year-days, html body .middleDiv .calContainer .calendar .julianDays .next-year-days {
   background-color: #ffbe47;
   width: calc(100% / 7);
   height: calc(100vh/10);
@@ -171,6 +171,10 @@ html body .middleDiv .calContainer .calendar .julianDays .julian {
   cursor: pointer;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
+}
+
+html body .middleDiv .calContainer .calendar .julianDays .prev-year-days, html body .middleDiv .calContainer .calendar .julianDays .next-year-days {
+  background-color: #8b6c33;
 }
 
 html body .middleDiv .calContainer .calendar .julianDays div:hover {
