@@ -35,6 +35,7 @@ html {
                 display: flex;
                 flex-flow: column;
                 width:15%;
+                
     
                 .months {
                     background-color: green;
@@ -43,6 +44,7 @@ html {
                     font-size: 20px;
                     border: solid black 1px;
                     cursor: pointer;
+                    transition: background-color 0.3s;
                 }
             }
     
@@ -69,8 +71,18 @@ html {
                     width: 100%;
                     height: 8%;
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
+
+                    .selectedMonth {
+                        font-size: 30px;
+                    }
+
+                    .selectedDate {
+                        font-size: 16px;
+                        margin: 5px 0;
+                    }
                 }
     
     
@@ -118,6 +130,7 @@ html {
                             color: black;
                             border: solid black 1px;
                             cursor: pointer;
+                            transition: background-color 0.2s;
                             
                         }
     
@@ -126,8 +139,8 @@ html {
                     }
     
                     .julianDays div:hover {
-                        background-color: rgb(255, 162, 131);
-                        border: solid blue 1px;
+                        background-color: rgb(255, 75, 75);
+                        border: solid rgb(204, 204, 255) 1px;
                     }
                 }
             }
