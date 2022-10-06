@@ -1,101 +1,118 @@
 @import url("./Main.css");
 html body {
   width: 100%;
-  background-color: #c0c0c8;
+  background-color: rgb(192, 192, 200);
+  display: flex;
+  flex-wrap: wrap;
 }
-
 html body .topHeader {
   width: 100%;
-  height: 80px;
+  height: 15vh;
   background-color: aquamarine;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-html body .calContainer {
-  width: 65%;
+html body .topHeader .topHeaderContent {
+  background-color: rgb(72, 190, 190);
+}
+html body .middleDiv {
+  background-color: cornflowerblue;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid black 1px;
+}
+html body .middleDiv .leftDiv {
+  background-color: rgb(0, 48, 0);
+  display: flex;
+  flex-flow: column;
+  width: 15%;
+}
+html body .middleDiv .leftDiv .months {
+  background-color: green;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border: solid black 1px;
+  cursor: pointer;
+}
+html body .middleDiv .leftDiv div:hover {
+  background-color: greenyellow;
+  border: rgb(240, 255, 181) solid 1px;
+}
+html body .middleDiv .calContainer {
+  width: 67%;
   height: 70vh;
   margin: 0 auto;
-  background-color: #dfdfdf;
-  color: #c7c7c7;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-shadow: 0px 40px 10px 5px rgba(0, 0, 255, 0.2);
-          box-shadow: 0px 40px 10px 5px rgba(0, 0, 255, 0.2);
+  background-color: rgb(223, 223, 223);
+  color: rgb(199, 199, 199);
+  justify-content: center;
+  box-shadow: 0px 40px 10px 5px rgba(0, 0, 255, 0.2);
 }
-
-html body .calContainer .calHeader {
-  background-color: #4b4bc3;
+html body .middleDiv .calContainer .calHeader {
+  background-color: rgb(75, 75, 195);
   width: 100%;
   height: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
-html body .calContainer .daysOfWeek {
+html body .middleDiv .calContainer .daysOfWeek {
   background-color: pink;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
-html body .calContainer .daysOfWeek .weekdays {
+html body .middleDiv .calContainer .daysOfWeek .weekdays {
   width: 100%;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: black;
   border: solid black 1px;
 }
-
-html body .calContainer .calendar {
-  width: calc(100%);
+html body .middleDiv .calContainer .calendar {
+  width: 100%;
   height: 100%;
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
   overflow-y: scroll;
-  padding-right: 15px;
-  /* Increase/decrease this value for cross-browser compatibility */
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  /* So the width will be 100% + 17px */
-  -webkit-box-shadow: darkgray;
-          box-shadow: darkgray;
+  padding-right: 15px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+  box-shadow: darkgray;
 }
-
-html body .calContainer .calendar .julianDays {
-  background-color: #60370e;
-  display: -webkit-box;
-  display: -ms-flexbox;
+html body .middleDiv .calContainer .calendar .julianDays {
+  background-color: rgb(96, 55, 14);
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
-html body .calContainer .calendar .julianDays .julian {
-  background-color: orange;
-  width: calc(100% / 7);
-  height: calc(100vh/10);
+html body .middleDiv .calContainer .calendar .julianDays .julian {
+  background-color: rgb(255, 190, 71);
+  width: 14.2857142857%;
+  height: 10vh;
   color: black;
   border: solid black 1px;
+  cursor: pointer;
 }
-/*# sourceMappingURL=index.css.map */
+html body .middleDiv .calContainer .calendar .julianDays div:hover {
+  background-color: rgb(255, 162, 131);
+  border: solid blue 1px;
+}
+html body .middleDiv .rightDiv {
+  background-color: rgb(95, 57, 95);
+  width: 15%;
+}
+html body .footer {
+  background-color: rgb(146, 139, 139);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .footer .footerContent {
+  background-color: darkgray;
+}/*# sourceMappingURL=index.css.map */
