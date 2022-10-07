@@ -1,4 +1,3 @@
 @import url("./reset.css");
-@import url("./Type.css");
-@import url("./Variables.css");
-/*# sourceMappingURL=Main.css.map */
+@import url("./Type.scss");
+@import url("./Variables.scss");/*# sourceMappingURL=Main.css.map */

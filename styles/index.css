@@ -1,208 +1,203 @@
 @import url("./Main.css");
-html body {
-  width: 100%;
-  background-color: #c0c0c8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+/*#region Variables*/
+/*#endregion Variables*/
+/*#region Type*/
+h1, h2, h3, h4, h5, h6, p, a, div {
+  font-family: "Rokkitt", serif;
 }
 
-html body .topHeader {
-  width: 100%;
-  height: 15vh;
-  background-color: aquamarine;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+h1 {
+  font-size: 40px;
 }
 
-html body .topHeader .topHeaderContent {
-  background-color: #48bebe;
-}
-
-html body .middleDiv {
-  background-color: cornflowerblue;
-  width: 100%;
-  height: 75vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  border: solid black 1px;
-}
-
-html body .middleDiv .leftDiv {
-  background-color: #003000;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  width: 15%;
-}
-
-html body .middleDiv .leftDiv .months {
-  background-color: green;
-  width: 100%;
-  height: 100%;
-  font-size: 20px;
-  border: solid black 1px;
-  cursor: pointer;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-
-html body .middleDiv .leftDiv div:hover {
-  background-color: greenyellow;
-  border: #f0ffb5 solid 1px;
-}
-
-html body .middleDiv .calContainer {
-  width: 67%;
-  height: 70vh;
-  margin: 0 auto;
-  background-color: #dfdfdf;
-  color: #c7c7c7;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-shadow: 0px 40px 10px 5px rgba(0, 0, 255, 0.2);
-          box-shadow: 0px 40px 10px 5px rgba(0, 0, 255, 0.2);
-}
-
-html body .middleDiv .calContainer .calHeader {
-  background-color: #4b4bc3;
-  width: 100%;
-  height: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-html body .middleDiv .calContainer .calHeader .selectedMonth {
+h2 {
   font-size: 30px;
 }
 
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 15px;
+}
+
+/*#endregion Type*/
+/*#region page style*/
+html body {
+  width: 100%;
+  background-color: #DBF0CD;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .topHeader {
+  width: 100%;
+  height: 13vh;
+  background-color: #DBF0CD;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body .topHeader .topHeaderContent {
+  color: #467F21;
+  font-size: 50px;
+  font-weight: 200;
+}
+html body .middleDiv {
+  background-color: #DBF0CD;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body .middleDiv .leftDiv {
+  display: flex;
+  flex-flow: column;
+  width: 15%;
+  border-radius: 5px;
+}
+html body .middleDiv .leftDiv .months {
+  background-color: #5D397C;
+  color: #C9B9D6;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: solid #140a1e 1px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  box-shadow: 1px 5px 10px 3px rgba(123, 92, 151, 0.4078431373);
+}
+html body .middleDiv .leftDiv div:hover {
+  background-color: #9E86B3;
+  color: #421F61;
+  border: #ede1f6 solid 1px;
+}
+html body .middleDiv .calContainer {
+  width: 67%;
+  height: 85vh;
+  margin: 0 auto;
+  color: rgb(199, 199, 199);
+  justify-content: center;
+  box-shadow: 10px 10px 10px 5px rgba(123, 92, 151, 0.4078431373);
+  border-radius: 8px;
+}
+html body .middleDiv .calContainer .calHeader {
+  background-color: #68A143;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+html body .middleDiv .calContainer .calHeader .selectedMonth {
+  font-size: 40px;
+  font-weight: 350;
+  color: #eff7e9;
+  text-overflow: #5D397C;
+}
 html body .middleDiv .calContainer .calHeader .selectedDate {
   font-size: 16px;
-  margin: 5px 0;
+  word-spacing: 2px;
+  color: #eff7e9;
 }
-
 html body .middleDiv .calContainer .daysOfWeek {
-  background-color: pink;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: #BDE3A5;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 html body .middleDiv .calContainer .daysOfWeek .weekdays {
   width: 100%;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: black;
-  border: solid black 1px;
+  justify-content: center;
+  align-items: center;
+  color: #172b0b;
+  border: solid rgb(66, 73, 67) 1px;
 }
-
 html body .middleDiv .calContainer .calendar {
-  width: calc(100%);
-  height: 100%;
-  background-color: #433939;
+  width: 100%;
+  height: 85.2%;
+  background-color: #68A143;
   overflow-y: scroll;
-  padding-right: 15px;
-  /* Increase/decrease this value for cross-browser compatibility */
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  /* So the width will be 100% + 17px */
-  -webkit-box-shadow: darkgray;
-          box-shadow: darkgray;
+  padding-right: 15px; /* Increase/decrease this value for cross-browser compatibility */
+  box-sizing: content-box; /* So the width will be 100% + 17px */
+  box-shadow: darkgray;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-
 html body .middleDiv .calContainer .calendar .julianDays {
-  background-color: #664320;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: rgb(40, 40, 40);
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
+html body .middleDiv .calContainer .calendar .julianDays .prev-year-padding {
+  background-color: rgb(40, 40, 40);
+  width: 14.2857142857%;
+  height: 10vh;
+  color: rgba(0, 0, 0, 0);
+  border: solid black 1px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 html body .middleDiv .calContainer .calendar .julianDays .prev-year-days, html body .middleDiv .calContainer .calendar .julianDays .current-year-days, html body .middleDiv .calContainer .calendar .julianDays .next-year-days {
-  background-color: #ffbe47;
-  width: calc(100% / 7);
-  height: calc(100vh/10);
+  background-color: #E0B682;
+  width: 14.2857142857%;
+  height: 10vh;
   color: black;
   border: solid black 1px;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-
 html body .middleDiv .calContainer .calendar .julianDays .prev-year-days, html body .middleDiv .calContainer .calendar .julianDays .next-year-days {
-  background-color: #8b6c33;
+  background-color: #FFE0B9;
 }
-
 html body .middleDiv .calContainer .calendar .julianDays div:hover {
-  background-color: #ff4b4b;
-  border: solid #ccccff 1px;
+  background-color: #FFEFDA;
+  border: solid #f8f2ea 1px;
 }
-
 html body .middleDiv .rightDiv {
-  background-color: #5f395f;
   width: 15%;
+  border-radius: 8px;
 }
-
+html body .middleDiv .rightDiv .eventDiv {
+  padding-top: 10px;
+  text-align: center;
+  color: #ede1f6;
+}
+html body .middleDiv .rightDiv .eventDiv button {
+  width: 80%;
+  height: 60px;
+  background-color: #421F61;
+  color: #ede1f6;
+  border-radius: 3px;
+  font-size: 20px;
+}
 html body .footer {
-  background-color: #928b8b;
+  background-color: #DBF0CD;
+  opacity: 0;
   width: 100%;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 2vh;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 html body .footer .footerContent {
   background-color: darkgray;
 }
-/*# sourceMappingURL=index.css.map */
+
+/*#endregion page style*//*# sourceMappingURL=index.css.map */

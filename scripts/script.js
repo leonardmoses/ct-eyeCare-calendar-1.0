@@ -15,13 +15,16 @@ const months = [
 ]
 
 // Set date to current date
-let date = new Date('Dec 29, 1984');
+let date = new Date();
 
 let decPrevYear = new Date(`Dec 1, ${date.getFullYear()-1}`);
 
+let dec1Padding = decPrevYear.getDay()+1
+
 console.log(date)
 console.log(decPrevYear)
-
+console.log(decPrevYear.getDay())
+console.log(dec1Padding)
 
 // #region Leap Year Check
 
@@ -48,10 +51,10 @@ if (isLeapYear) {
 
 console.log(`Total Days = ${totalYearDays}`)
 
-
+document.querySelector('.topHeaderContent').innerHTML = date.getFullYear();
 
 // display Month in calHeader
-document.querySelector('.selectedMonth').innerHTML = months[date.getMonth()]
+document.querySelector('.selectedMonth').innerHTML = months[date.getMonth()];
 
 // display date in calHeader
 document.querySelector('.selectedDate').innerHTML = date.toDateString();
@@ -62,6 +65,11 @@ const firstDayOfYear = new Date(date.getFullYear(), 0)
 const monthDays = document.querySelector('.julianDays');
 
 let days = "";
+
+for (let i = 1; i<= dec1Padding; i++) {
+    days += `<div class='prev-year-padding'>${i}</div>`;
+    monthDays.innerHTML = days;
+}
 
 for (let i = 1; i<= 31; i++) {
     days += `<div class='prev-year-days'>${i}</div>`;
@@ -79,4 +87,3 @@ for (let i = 1; i<= 31; i++) {
 }
 
 console.log(firstDayOfYear)
-console.log(firstDayOfYear.getDay())
